@@ -1,4 +1,4 @@
-const ex = require("../exercicios-2")
+const ex = require("../../exercicios-2")
 
 describe("ARRAYS", () => {
 
