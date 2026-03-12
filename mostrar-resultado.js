@@ -1,23 +1,23 @@
-const r = require("./result.json")
+const fs = require("fs")
+
+const dados = JSON.parse(fs.readFileSync("result.json"))
 
 console.log("=================================")
 console.log("RESULTADO DOS EXERCÍCIOS")
-console.log("=================================")
+console.log("=================================\n")
 
-r.testResults.forEach(testFile => {
+let contador = 1
 
-  testFile.assertionResults.forEach(test => {
+dados.testResults.forEach(suite => {
 
-    const nome = test.ancestorTitles[0]
+    suite.assertionResults.forEach(teste => {
 
-    if (test.status === "passed") {
-      console.log(nome + " ✔")
-    } else {
-      console.log(nome + " ✘")
-    }
+        const status = teste.status === "passed" ? "✔" : "✘"
 
-  })
+        console.log(`EX${contador} ${status}`)
+
+        contador++
+
+    })
 
 })
-
-console.log("=================================")
