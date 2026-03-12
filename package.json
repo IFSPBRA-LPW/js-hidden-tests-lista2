@@ -6,7 +6,7 @@
   },
   
   "scripts": {
-    "test": "jest --json --outputFile=result.json"
+    "test": "jest --json --outputFile=result.json --silent"
   }
 }
 
