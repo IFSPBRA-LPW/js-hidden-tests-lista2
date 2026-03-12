@@ -14,7 +14,7 @@ dados.testResults.forEach(suite => {
 
         const status = teste.status === "passed" ? "✔" : "✘"
 
-        console.log(`EX${contador} ${status}`)
+        console.log(`Exercício ${contador} ${status}`)
 
         contador++
 
